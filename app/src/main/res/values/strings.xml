@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">The Benefit Bureau</string>
+
+    <!--SIGN IN-->
+    <string name="company">Company</string>
+    <string name="yourname">Your Name</string>
+    <string name="login">LOGIN</string>
+    <string name="help"><u>Help?</u></string>
+    <string name="we">We\'re here for you.</string>
+
+    <!--MAIN-->
+    <string name="companyName">Company Name</string>
+    <string name="contact">CONTACT ASSISTANT</string>
+    <string name="phoneSupport">PHONE SUPPORT</string>
+    <string name="visitWeb">VISIT WEBSITE</string>
+    <string name="fullName">Full Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="How">How can we help?</string>
+    <string name="Submit">SUBMIT TICKET</string>
+
+</resources>
