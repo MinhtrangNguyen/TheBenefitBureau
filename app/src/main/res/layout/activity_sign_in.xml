@@ -35,7 +35,7 @@
                 android:hint="@string/yourname"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:background="@color/white"
+                android:background="@drawable/bg_grey_border"
                 android:singleLine="true" />
 
             <EditText
@@ -46,7 +46,7 @@
                 android:inputType="text"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:background="@color/white"
+                android:background="@drawable/bg_grey_border"
                 android:singleLine="true" />
 
             <Button

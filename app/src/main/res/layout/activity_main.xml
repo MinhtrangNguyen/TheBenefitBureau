@@ -40,7 +40,7 @@
                     android:id="@+id/tvContact"
                     android:textColor="@color/white"
                     android:layout_marginTop="10dp"
-                    android:textSize="12sp"/>
+                    android:textSize="14sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -57,7 +57,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
                         android:background="@color/darkYellow"
                         android:id="@+id/llPhoneSupport"
@@ -66,15 +66,16 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_phone"/>
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/phone"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/phoneSupport"
-                            android:layout_marginTop="5dp"
+                            android:id="@+id/tvPhone"
+                            android:layout_marginTop="10dp"
                             android:textColor="@color/white"
                             android:textSize="12sp"/>
 
@@ -82,7 +83,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
                         android:background="@color/darkYellow"
                         android:id="@+id/llVisitWeb"
@@ -91,15 +92,16 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_computer"/>
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/site"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/visitWeb"
-                            android:layout_marginTop="5dp"
+                            android:id="@+id/tvWebsite"
+                            android:layout_marginTop="10dp"
                             android:textColor="@color/white"
                             android:textSize="12sp" />
 
@@ -118,7 +120,8 @@
                         android:id="@+id/input_full_name"
                         android:hint="@string/fullName"
                         android:inputType="text"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_grey_border"
+                        android:textColor="@color/grey"
                         android:textSize="12sp"
                         android:paddingLeft="15dp"
                         android:layout_weight="1"
@@ -132,7 +135,8 @@
                         android:id="@+id/input_company_main"
                         android:hint="@string/company"
                         android:inputType="text"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_grey_border"
+                        android:textColor="@color/grey"
                         android:textSize="12sp"
                         android:paddingLeft="15dp"
                         android:layout_weight="1"
@@ -154,7 +158,8 @@
                         android:id="@+id/input_phone"
                         android:hint="@string/phoneNumber"
                         android:inputType="phone"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_grey_border"
+                        android:textColor="@color/grey"
                         android:textSize="12sp"
                         android:paddingLeft="15dp"
                         android:layout_weight="1"
@@ -168,7 +173,8 @@
                         android:id="@+id/input_email"
                         android:hint="@string/emailAddress"
                         android:inputType="textEmailAddress"
-                        android:background="@color/white"
+                        android:background="@drawable/bg_grey_border"
+                        android:textColor="@color/grey"
                         android:textSize="12sp"
                         android:paddingLeft="15dp"
                         android:layout_weight="1"
@@ -183,7 +189,8 @@
                     android:layout_height="fill_parent"
                     android:id="@+id/input_comment"
                     android:hint="@string/How"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_grey_border"
+                    android:textColor="@color/grey"
                     android:textSize="12sp"
                     android:paddingLeft="15dp"
                     android:paddingRight="10dp"

@@ -1,11 +1,11 @@
 package com.tbbnj.app.thebenefitbureau;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,7 +14,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,15 +23,16 @@ import android.widget.Toast;
 
 import com.tbbnj.app.thebenefitbureau.util.ApiHandler;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MainActivity extends AppCompatActivity {
-    TextView tvCompanyName;
+    TextView tvCompanyName, tvContact, tvPhone, tvWebsite;
     LinearLayout llPhoneSupport,llVisitWeb;
     EditText input_full_name, input_company_main, input_phone, input_email, input_comment;
     Button btnSubmit;
@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         tvCompanyName = (TextView) findViewById(R.id.tvCompanyName);
+        tvContact = (TextView) findViewById(R.id.tvContact);
+        tvPhone = (TextView) findViewById(R.id.tvPhone);
+        tvWebsite = (TextView) findViewById(R.id.tvWebsite);
 
         llPhoneSupport = (LinearLayout) findViewById(R.id.llPhoneSupport);
         llVisitWeb = (LinearLayout) findViewById(R.id.llVisitWeb);
@@ -65,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
         input_comment.setMaxLines(Integer.MAX_VALUE);
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            tvContact.setLetterSpacing((float) 0.2);
+            tvPhone.setLetterSpacing((float) 0.1);
+            tvWebsite.setLetterSpacing((float) 0.1);
+            btnSubmit.setLetterSpacing((float) 0.1);
+        }
 
         UsPhoneNumberFormatter addLineNumberFormatter = new UsPhoneNumberFormatter(
                 new WeakReference<EditText>(input_phone));
@@ -339,5 +349,10 @@ public class MainActivity extends AppCompatActivity {
             return formattedString.toString();
         }
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }
